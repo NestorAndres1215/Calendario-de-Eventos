@@ -1,0 +1,31 @@
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.day {
+  background: white;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.3s;
+}
+
+.day:hover {
+  background: #d0f0fd;
+  transform: scale(1.05);
+}
+
+.day.has-event {
+  border-left: 5px solid #27ae60;
+  background: #ecf9f1;
+}
+
+.day.empty {
+  background: transparent;
+  box-shadow: none;
+  cursor: default;
+}
